@@ -1,0 +1,16 @@
+
+{% load static %}
+
+
+<div id = "messages" class="container">
+    {% if messageList %}
+
+        {% for message in messageList %}
+            <h4> > <strong>{{ message.sender }}</strong> : {{ message.text }} (<i>{{message.date}}</i>) </h4>
+        {% endfor %}
+
+    {% else %}
+        <p>No messages available.</p>
+    {% endif %}
+</div>
+
